@@ -1,0 +1,95 @@
+﻿@model Actividad_2_ASP.Models.Contacto
+@{
+    ViewData["Title"] = "Editar Contacto";
+}
+
+<h1 class="text-center">ASP.NET 7 (.NET Core MVC)</h1>
+
+
+<div class="row">
+    <div class="offeset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h3 class="text-white"><strong>Editar Usuario</strong></h3>
+            </div>
+            <div class="card-body">
+                <form asp-action="Editar">
+
+                    <!-- ID DEL USUARIO COMO CAMPO OCULTO-->
+                    <input type="hidden" asp-for="Id"/>
+
+
+
+
+                    <div aps-asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="Nombre" class="control-label"></label>
+                        <input asp-for="Nombre" class="form-control" placeholder=" Ingresa el nombre" />
+                        <span asp-validation-for="Nombre" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Apellido1" class="control-label"></label>
+                        <input asp-for="Apellido1" class="form-control" placeholder=" Ingresa el Apellido 1" />
+                        <span asp-validation-for="Apellido1" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Apellido2" class="control-label"></label>
+                        <input asp-for="Apellido2" class="form-control" placeholder=" Ingresa el Apellido 2" />
+                        <span asp-validation-for="Apellido2" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Telefono" class="control-label"></label>
+                        <input asp-for="Telefono" class="form-control" placeholder=" Ingresa el Teléfono" />
+                        <span asp-validation-for="Telefono" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" placeholder=" Ingresa el Email" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <button typer="submit" class="btn btn-primary d-block mx-auto"><i class="bi bi-pencil-fill"></i> Editar Usuario</button>
+                    </div>
+
+                </form>
+                <a asp-asp-controller="Inicio" asp-action="Index"> Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            //llamar a datatable
+            $('#tblUsuarios').DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+        });
+    </script>
+
+}

@@ -1,0 +1,58 @@
+﻿@model Actividad_2_ASP.Models.Contacto
+@{
+    ViewData["Title"] = "Detalle Contacto";
+}
+
+<h1 class="text-center">ASP.NET 7 (.NET Core MVC)</h1>
+
+
+<div class="row">
+    <div class="offeset-12">
+        <div class="card border">
+            <div class="card-header bg-dark">
+                <h3 class="text-white"><strong>Detalle Usuario</strong></h3>
+            </div>
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Nombre :</strong>@Html.DisplayFor(m => m.Nombre)</li>
+                    <li class="list-group-item"><strong>Apellido 1º :</strong>@Html.DisplayFor(m => m.Apellido1)</li>
+                    <li class="list-group-item"><strong>Apellido 2º :</strong>@Html.DisplayFor(m => m.Apellido2)</li>
+                    <li class="list-group-item"><strong>Teléfono :</strong>@Html.DisplayFor(m => m.Telefono)</li>
+                    <li class="list-group-item"><strong>Email :</strong>@Html.DisplayFor(m => m.Email)</li>
+                </ul>
+                <a asp-asp-controller="Inicio" asp-action="Index"> Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            //llamar a datatable
+            $('#tblUsuarios').DataTable({
+                language: {
+                    "decimal": "",
+                    "emptyTable": "No hay información",
+                    "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                    "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                    "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                    "infoPostFix": "",
+                    "thousands": ",",
+                    "lengthMenu": "Mostrar _MENU_ Entradas",
+                    "loadingRecords": "Cargando...",
+                    "processing": "Procesando...",
+                    "search": "Buscar:",
+                    "zeroRecords": "Sin resultados encontrados",
+                    "paginate": {
+                        "first": "Primero",
+                        "last": "Ultimo",
+                        "next": "Siguiente",
+                        "previous": "Anterior"
+                    }
+                }
+            });
+        });
+    </script>
+
+}
