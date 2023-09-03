@@ -6,8 +6,8 @@
   <br>
 </h1>
 
-<h4 align="center">Agenda ASP.NET Modelo-Vista-Controlador ( MVC ) <a href="http://astrotenerife.com" target="_blank">Electron</a>.</h4>
-<h4 align="center">NET 7 MVC: Code First, Modelos, Migraciones, Páginas Razor, Extensiones Nuget, TempData <a href="http://astrotenerife.com" target="_blank">Electron</a>.</h4>
+<h4 align="center">Agenda ASP.NET Modelo-Vista-Controlador ( MVC ) <a href="http://astrotenerife.com"</h4>
+<h4 align="center">NET 7 MVC: Code First, Modelos, Migraciones, Páginas Razor, Extensiones Nuget, TempData</h4>
 
 
 
