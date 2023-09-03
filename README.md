@@ -15,7 +15,7 @@
 
 <p align="center">
 
-<img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+
 
 
   </a>
